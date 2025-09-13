@@ -15,7 +15,7 @@ export default function HeroSection() {
           <h3 className="mt-2 mb-4">
             lo utilizzano tutti, addman a sort!
           </h3>
-          <Link 
+          <Link to="/Login"
             className="mr-8 text-lg text-white p-2 transition ease-linear w-fit
             bg-orange-500 hover:bg-white hover:text-orange-500 hover:border">
 

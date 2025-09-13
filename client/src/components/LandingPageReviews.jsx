@@ -1,10 +1,10 @@
 const reviews = [
   {
-    review: "mo fra di che cosa stiamo parlando!",
+    review: "mo fra ma di che cosa stiamo parlando!",
     person: "fratm carnal",
   },
   {
-    review: "il top del top fra",
+    review: "nu capovolavor dell' ingegnieria d mow je cuss",
     person: "cosimino",
   },
   {
@@ -20,13 +20,13 @@ export default function LandingPageReviews() {
       <div 
           key={i}
           className=
-          {`${i !== reviews.length - 1 ?  "border-r" : null} 
-           p-8 w-2xl flex flex-col justify-center text-center`}>
+          {`${i !== reviews.length - 1 ?  "border-r-2 border-dashed" : null} 
+           p-8 w-2xl flex flex-col justify-center text-left`}>
         <h1
-            className="italic font-semibold text-lg"
+            className="italic font-bold text-lg"
           >"{review.review}"</h1>
         <h3
-              className="font-semibold mt-2"
+              className="font-medium mt-2"
           > &gt; {review.person}</h3>
       </div>
       ))}

@@ -1,5 +1,6 @@
 import LandingPage from "./pages/LandingPage";
 import { Routes, Route } from "react-router-dom";
+import Login from "./pages/Login";
 
 export default function App() {
   return (
@@ -7,6 +8,7 @@ export default function App() {
         <div className="max-w-4xl w-full">
     <Routes>
           <Route path="/" element={<LandingPage />}></Route>
+          <Route path="/Login" element={<Login />}></Route>
     </Routes>
         </div>
       </div>
