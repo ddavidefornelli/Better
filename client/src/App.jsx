@@ -1,5 +1,4 @@
-import Contatti from "./Contatti";
-import LandingPage from "./LandingPage";
+import LandingPage from "./pages/LandingPage";
 import { Routes, Route } from "react-router-dom";
 
 export default function App() {
@@ -8,7 +7,6 @@ export default function App() {
         <div className="max-w-4xl w-full">
     <Routes>
           <Route path="/" element={<LandingPage />}></Route>
-          <Route path="/contatti" element={<Contatti />}></Route>
     </Routes>
         </div>
       </div>
