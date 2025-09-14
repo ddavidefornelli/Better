@@ -11,5 +11,3 @@ try:
 
 except sqlite3.Error as e:
     print("Errore: ", e)
-
-    
