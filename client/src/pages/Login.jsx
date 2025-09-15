@@ -1,11 +1,13 @@
 import { useState } from "react"
+import { useNavigate } from "react-router-dom"
 import Header from "../components/Header"
 import registerUser from "../login.mjs" 
 
 export default function Login() {
+  const navigate = useNavigate()
   const [password, setPassword] = useState('')
-  const [passwordConfirm, setPasswordConfirm] = useState()
-  const [email, setEmail] = useState()
+  const [passwordConfirm, setPasswordConfirm] = useState('')
+  const [email, setEmail] = useState('')
   const [userName, setUserName] = useState('')
 
   function isInputValid(password, passwordConfirm, userName) {
@@ -16,7 +18,10 @@ export default function Login() {
   }
 
   function handleSend() {
-    if(isInputValid(password, passwordConfirm, userName)) registerUser()
+    if(isInputValid(password, passwordConfirm, userName)) {
+      registerUser()
+      navigate("/better", {replace: true}) 
+    }
   }
 
   return (
@@ -65,9 +70,9 @@ export default function Login() {
             name="" 
             id="" 
             type="password"
-            placeholder="conferm password"
+            placeholder="confirm password"
             maxLength={16}
-            className={`resize-none border texthidden ${password !== passwordConfirm ? "border-red-400" : "border-green-500"} mb-4 p-1`}
+            className={`resize-none border texthidden ${password === passwordConfirm && passwordConfirm.length >= 8 ? "border-green-500" : "border-red-400"} mb-4 p-1`}
             value={passwordConfirm}
             onChange={e => setPasswordConfirm(e.target.value)}
           />

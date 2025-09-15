@@ -31,4 +31,9 @@ if __name__ == "__main__":
 
 
 
+<<<<<<< HEAD
 
+=======
+except sqlite3.Error as e:
+    print("Errore: ", e)
+>>>>>>> 4ca18f0c004060e2d4fe670ecb618cf7d5a17368
